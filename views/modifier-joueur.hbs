@@ -1,0 +1,48 @@
+<main role="main">
+
+
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+       
+      <a href="sortie-joueur" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Sortie Joueur</a>
+      <a href="ajouter-un-joueur" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ajouter un Joueur</a>
+       
+
+      <div class="row">
+       
+        {{#each club}}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+              <title></title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">image</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text"><a href="{{this.id}}">{{this.defense}}</a></p>
+              <p class="card-text"><a href="{{this.id}}">{{this.milieu}}</a></p>
+              <p class="card-text"><a href="{{this.id}}">{{this.attaque}}</a></p>
+              <p class="card-text"><a href="{{this.id}}">{{this.equipe}}</a></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success btn-sm">
+                    <a href="/" style="text-decoration: none; color: #fff">Voir</a>
+                    </button>
+                  <button type="button" class="btn btn-sm btn-danger">
+                    <a href="/" style="text-decoration: none; color: #fff">Supprimer</a>
+                    </button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+
+      </div>
+    </div>
+  </div>
+
+</main>

@@ -1,0 +1,45 @@
+<main role="main">
+
+
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+
+      <a href="ajouter-un-joueur" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ajouter une
+        equipe</a>
+
+      <div class="row">
+
+        {{#each club}}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+              <title></title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">image</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">{{this.defense}}</p>
+              <p class="card-text">{{this.milieu}}</p>
+              <p class="card-text">{{this.attaque}}</p>
+              <p class="card-text">{{this.equipe}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success btn-sm">
+                    <a href="/sortie-joueur/{{this.id}}" class="btn btn-danger btn-sm active" role="button"
+                      aria-pressed="true">Modifier</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            {{/each}}
+
+          </div>
+        </div>
+      </div>
+
+</main>
